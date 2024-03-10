@@ -5,7 +5,7 @@
 1. ohmyzsh setup/ powerlevel10k
 2. nvm setup
 3. neovim setup
-4. ssh keys setup
+4. ssh keys/ ssh config setup
 5. dotfiles setup using yadm
 6. encrypt ssh keys, gitconfig
 7. tmux/ tpm plugin configuration task
