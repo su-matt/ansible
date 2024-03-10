@@ -2,7 +2,7 @@
 
 # Todo
 
-1. ohmyzsh setup/ powerlevel10k
+1. ohmyzsh setup/ powerlevel10k/ zsh plugins
 2. nvm setup
 3. neovim setup
 4. ssh keys/ ssh config setup
