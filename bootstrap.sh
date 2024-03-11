@@ -13,10 +13,13 @@ if [[ "$(uname -s)" == "Linux" ]] && [[ -f /etc/os-release ]] && grep -q "Ubuntu
     sudo apt install -y git ansible curl
 
     
-    echo "Homebrew is not installed. Installing Homebrew..."
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    if ! command -v brew &> /dev/null; then
+        echo "Homebrew is not installed. Installing Homebrew..."
+        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-    brew_linux
+        brew_linux
+
+    fi
 
 # Check if the OS is Arch Linux
 elif [[ "$(uname -s)" == "Linux" ]] && command -v pacman &> /dev/null; then
