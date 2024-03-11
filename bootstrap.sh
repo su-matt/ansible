@@ -9,7 +9,8 @@ brew_linux() {
 
 # Check if the OS is Ubuntu
 if [[ "$(uname -s)" == "Linux" ]] && [[ -f /etc/os-release ]] && grep -q "Ubuntu" /etc/os-release; then
-    sudo apt update
+
+    sudo apt update && sudo apt upgrade -y
     sudo apt install -y git ansible curl
 
     
