@@ -37,3 +37,13 @@ use docker osx
 ### arch
 
 vm
+
+# To run
+
+will need to first install git then clone repo
+then run script
+
+# Todo
+
+bootstrap script to update ubuntu, install git and ansible (if arch, update pacman and install git and ansible etc) then clone ansible in home directory and then
+run ansible playbook
