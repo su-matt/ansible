@@ -1,4 +1,4 @@
-#! bin/bash
+#!bin/bash
 
 # Function to install Homebrew on macOS
 install_homebrew() {
