@@ -40,7 +40,9 @@ vm
 
 # To run
 
-will need to first install git then clone repo
+if ubuntu, run apt update.
+will need to first install git, and sudo. then clone repo, then cd ansible, then chmod +x
+bootstrap.sh
 then run script
 
 # Todo

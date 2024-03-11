@@ -10,7 +10,7 @@ brew_linux() {
 # Check if the OS is Ubuntu
 if [[ "$(uname -s)" == "Linux" ]] && [[ -f /etc/os-release ]] && grep -q "Ubuntu" /etc/os-release; then
     sudo apt update
-    sudo apt install -y git ansible
+    sudo apt install -y git ansible curl
 
     
     echo "Homebrew is not installed. Installing Homebrew..."
