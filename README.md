@@ -49,3 +49,9 @@ then run script
 
 bootstrap script to update ubuntu, install git and ansible (if arch, update pacman and install git and ansible etc) then clone ansible in home directory and then
 run ansible playbook
+
+fix submodule stuff, .zshrc not working: may need to delete file in ansible
+
+## Errors
+
+if getting locale error, run: sudo dpkg-reconfigure locales
