@@ -1,11 +1,5 @@
 #!/bin/bash
 
-# Function to install Homebrew on in Ubuntu linux
-brew_linux() {
-  test -d ~/.linuxbrew && eval "$(~/.linuxbrew/bin/brew shellenv)"
-  test -d /home/linuxbrew/.linuxbrew && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-  echo "eval \"\$($(brew --prefix)/bin/brew shellenv)\"" >> ~/.bashrc
-}
 
 # Check if the OS is Ubuntu
 if [[ "$(uname -s)" == "Linux" ]] && [[ -f /etc/os-release ]] && grep -q "Ubuntu" /etc/os-release; then
@@ -13,14 +7,6 @@ if [[ "$(uname -s)" == "Linux" ]] && [[ -f /etc/os-release ]] && grep -q "Ubuntu
     sudo apt update && sudo apt upgrade -y
     sudo apt install -y git ansible curl
 
-    
-    if ! command -v brew &> /dev/null; then
-        echo "Homebrew is not installed. Installing Homebrew..."
-        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" -y
-
-        brew_linux
-
-    fi
 
 # Check if the OS is Arch Linux
 elif [[ "$(uname -s)" == "Linux" ]] && command -v pacman &> /dev/null; then
