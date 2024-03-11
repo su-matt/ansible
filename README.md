@@ -60,3 +60,8 @@ More todos: get powerlevel fonts, brew install eza, remove homebrew script in
 bootstrap
 
 also need to have just ubuntu not wsl but do later
+
+also may remember to add user to sudo group by if sudo not found aka my github name:
+
+su
+sudo usermod -aG sudo <username>
