@@ -58,3 +58,5 @@ if getting locale error, run: sudo dpkg-reconfigure locales
 
 More todos: get powerlevel fonts, brew install eza, remove homebrew script in
 bootstrap
+
+also need to have just ubuntu not wsl but do later
