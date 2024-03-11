@@ -8,10 +8,10 @@ if [[ "$(uname -s)" == "Linux" ]] && [[ -f /etc/os-release ]] && grep -q "Ubuntu
     sudo apt install -y git ansible curl
 
 
-# Check if the OS is Arch Linux
-elif [[ "$(uname -s)" == "Linux" ]] && command -v pacman &> /dev/null; then
-    sudo pacman -Syu --noconfirm
-    sudo pacman -S --noconfirm git ansible
+# # Check if the OS is Arch Linux
+# elif [[ "$(uname -s)" == "Linux" ]] && command -v pacman &> /dev/null; then
+#     sudo pacman -Syu --noconfirm
+#     sudo pacman -S --noconfirm git ansible
 
 # Check if the OS is macOS
 elif [[ "$(uname -s)" == "Darwin" ]]; then

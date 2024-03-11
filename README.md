@@ -55,3 +55,6 @@ fix submodule stuff, .zshrc not working: may need to delete file in ansible
 ## Errors
 
 if getting locale error, run: sudo dpkg-reconfigure locales
+
+More todos: get powerlevel fonts, brew install eza, remove homebrew script in
+bootstrap
