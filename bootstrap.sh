@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Function to install Homebrew on macOS
+# Function to install Homebrew on in Ubuntu linux
 brew_linux() {
   test -d ~/.linuxbrew && eval "$(~/.linuxbrew/bin/brew shellenv)"
   test -d /home/linuxbrew/.linuxbrew && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
