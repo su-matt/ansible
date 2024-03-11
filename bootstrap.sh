@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Function to install Homebrew on macOS
-install_homebrew() {
+brew_linux() {
   test -d ~/.linuxbrew && eval "$(~/.linuxbrew/bin/brew shellenv)"
   test -d /home/linuxbrew/.linuxbrew && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
   echo "eval \"\$($(brew --prefix)/bin/brew shellenv)\"" >> ~/.bashrc
@@ -12,7 +12,11 @@ if [[ "$(uname -s)" == "Linux" ]] && [[ -f /etc/os-release ]] && grep -q "Ubuntu
     sudo apt update
     sudo apt install -y git ansible
 
-    install_homebrew
+    
+    echo "Homebrew is not installed. Installing Homebrew..."
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+    brew_linux
 
 # Check if the OS is Arch Linux
 elif [[ "$(uname -s)" == "Linux" ]] && command -v pacman &> /dev/null; then
