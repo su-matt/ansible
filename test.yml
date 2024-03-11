@@ -1,0 +1,25 @@
+- hosts: localhost
+
+  gather_facts: true
+  gather_subset:
+    - "!all"
+    - "min"
+  # - "hardware"
+
+  tasks:
+    - name: Show Facts
+      debug:
+        msg: "{{ ansible_facts }}"
+
+    - name: test conditional
+      when: ansible_facts['distribution'] == 'Ubuntu' and ansible_facts['kernel'] | regex_search('WSL')
+      debug:
+        msg: "Debian"
+
+    - name: test2 ansible shell
+      ansible.builtin.shell: ls -la
+      register: test
+
+    - name: test2
+      debug:
+        msg: "{{ test.stdout_lines }}"
