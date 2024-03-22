@@ -64,4 +64,12 @@ also need to have just ubuntu not wsl but do later
 also may remember to add user to sudo group by if sudo not found aka my github name:
 
 su
+
 sudo usermod -aG sudo <username>
+
+MORE: molten dependencies, uberzug, lf
+
+# After ansible runs,
+
+1. for some reason change shell isnt working so: chsh -s /usr/bin/zsh
+2. for nvim, make sure to do nvm use node to install latest npm
