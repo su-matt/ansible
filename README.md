@@ -73,3 +73,4 @@ MORE: molten dependencies, uberzug, lf
 
 1. for some reason change shell isnt working so: chsh -s /usr/bin/zsh
 2. for nvim, make sure to do nvm use node to install latest npm
+3. run `tmux source .tmux.conf` then leader key I to install plugins in tmux
