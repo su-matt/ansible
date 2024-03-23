@@ -2,12 +2,12 @@
 
 
 # Check if the OS is Ubuntu
-if [[ "$(uname -s)" == "Linux" ]] && [[ -f /etc/os-release ]] && grep -q "Ubuntu" /etc/os-release; then
+if grep -q microsoft /proc/version || [ "$OS_NAME" == "Linux" ]; then
 
     sudo apt update && sudo apt upgrade -y
     sudo apt install -y git ansible curl
 
-    if ! command -v brew &> /dev/null; then
+     if ! [ -x "$(command -v brew)" ] && [ ! -d ~/.linuxbrew ]; then
         echo "Homebrew is not installed. Installing Homebrew..."
         /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" -y
 
